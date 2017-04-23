@@ -10,3 +10,69 @@ Migrating to CreateProjects (20170418031054)
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "projects" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Sublime"], ["created_at", "2017-04-23 17:38:11.390013"], ["updated_at", "2017-04-23 17:38:11.390013"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "projects"
+
+
+Started GET "/" for ::1 at 2017-04-23 12:42:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 291ms (Views: 284.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-04-23 12:42:05 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-04-23 12:42:05 -0500
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-04-23 12:42:05 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2017-04-23 12:42:05 -0500
+
+
+Started GET "/projects/new" for ::1 at 2017-04-23 12:42:09 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 38ms (Views: 32.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/projects" for ::1 at 2017-04-23 12:42:11 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2hEnasRGyrfaO/PsTC9N4UP8GUSbmB7VI6RHLRHXSOnM2OlCb4rr0iBzozVSiF9nYDRq3tveqTVKMPDiDkRb0Q==", "project"=>{"name"=>"test", "description"=>"test"}, "commit"=>"Create Project"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test"], ["description", "test"], ["created_at", "2017-04-23 17:42:11.966927"], ["updated_at", "2017-04-23 17:42:11.966927"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/2" for ::1 at 2017-04-23 12:42:11 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered projects/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 13.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/new" for ::1 at 2017-04-23 12:42:18 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for ::1 at 2017-04-23 12:42:19 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wcULLag0/im1LyUmCI+DypI1j5yjwjps9eWehNzrCfHXDMUFA/jfTE9ndf8WKJFMsf38BuOEjYyccSlLw3gayQ==", "project"=>{"name"=>"", "description"=>""}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered projects/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.1ms)
