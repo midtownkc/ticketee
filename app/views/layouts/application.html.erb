@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
   <title>
   	<% if content_for?(:title) %>
   	 <%= yield(:title) %>
@@ -8,11 +9,18 @@
   		Ticketee
   	<% end %>
   </title>
+=======
+  <title><%= @title || "Ticketee" %></title>
+>>>>>>> 4d694a250858ebf9d3a772c6253cb53f6fb8ad34
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<% flash.each do |key, message| %>
+  <div><%= message %></div>
+<% end %>
 
 <%= yield %>
 
