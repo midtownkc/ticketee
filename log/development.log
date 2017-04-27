@@ -278,3 +278,271 @@ Processing by ProjectsController#index as HTML
   [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
   Rendered projects/index.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-04-25 08:25:10 -0500
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.8ms)
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.2ms)
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maxfred/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (155.1ms)
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateProjects (20170418031054)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170418031054"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2017-04-25 08:25:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3736ms (Views: 3726.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-04-25 08:25:42 -0500
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-04-25 08:25:42 -0500
+
+
+Started GET "/assets/application.self-caf4b2e9a726fcb3f268a50cb3d506a58d6bedf1270597d583b7b044ab77ef0e.css?body=1" for ::1 at 2017-04-25 08:25:42 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2017-04-25 08:25:42 -0500
+
+
+Started GET "/projects/new" for ::1 at 2017-04-25 08:25:49 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (17.4ms)
+  Rendered projects/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-04-25 09:05:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1928ms (Views: 1918.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-7a8c08f05ffdeb277da2566118ea0fb259bd26b33f3aa867d34a574b3cba9b1d.css?body=1" for ::1 at 2017-04-25 09:05:45 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2017-04-25 09:05:45 -0500
+
+
+Started GET "/projects/new" for ::1 at 2017-04-25 09:05:47 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (27.3ms)
+  Rendered projects/new.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-04-25 09:08:32 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-04-25 09:08:32 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-04-25 09:08:32 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2017-04-25 09:08:32 -0500
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-04-25 09:08:32 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-04-25 09:08:32 -0500
+
+
+Started GET "/assets/application.self-7a8c08f05ffdeb277da2566118ea0fb259bd26b33f3aa867d34a574b3cba9b1d.css?body=1" for ::1 at 2017-04-25 09:08:32 -0500
+
+
+Started GET "/" for ::1 at 2017-04-25 10:15:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 2911ms (Views: 2899.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-fdc34fcfd990bfdd7a7ffe72b36f9f7abb6dd3faf33237e4c765147f5baf5384.css?body=1" for ::1 at 2017-04-25 10:15:31 -0500
+
+
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for ::1 at 2017-04-25 10:15:31 -0500
+
+
+Started GET "/projects/new" for ::1 at 2017-04-25 10:15:40 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (25.6ms)
+  Rendered projects/new.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 81ms (Views: 76.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/projects" for ::1 at 2017-04-25 10:15:42 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wg8Juc2TpmlHqyWTJI5M3AxxZh3g0wvhlFYKvUq/1GSubgCm+3znf0b7Hw2UtdKuaknPB50DINiGR5NCYqlzxw==", "project"=>{"name"=>"", "description"=>""}, "commit"=>"Create Project"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered projects/_form.html.erb (2.1ms)
+  Rendered projects/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-04-25 10:26:25 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1852ms (Views: 1851.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-04-25 10:26:27 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-7783bf597fbf79b1c3538aabb2541d3e1013a18ddc95e1d5d21b9a63166430e0.css?body=1" for ::1 at 2017-04-25 10:26:27 -0500
+
+
+Started GET "/assets/application.self-7783bf597fbf79b1c3538aabb2541d3e1013a18ddc95e1d5d21b9a63166430e0.css?body=1" for ::1 at 2017-04-25 10:26:27 -0500
+
+
+Started GET "/projects/new" for ::1 at 2017-04-25 10:26:31 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (2.3ms)
+  Rendered projects/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 32ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new" for ::1 at 2017-04-25 10:26:39 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (1.9ms)
+  Rendered projects/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for ::1 at 2017-04-25 10:26:41 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4bOr4IiFilWSuUAICM0hBxWSO403OVG9n6jDZVA8bNcV0qL/vmrLQ5Ppepa49r91c6qSl0rpeoSNuVqaeCrLdA==", "project"=>{"name"=>"", "description"=>""}, "commit"=>"Create Project"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered projects/_form.html.erb (3.8ms)
+  Rendered projects/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/projects" for ::1 at 2017-04-25 10:26:48 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fjIicCe9dQjhReIulIBhJvY0WJ3AG8lpJPb0nwaUmPOKUytvEVI0HuAV2LAku/9UkAzxh73L4lA2521gLoI/UA==", "project"=>{"name"=>"Test1", "description"=>"Test2"}, "commit"=>"Create Project"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "projects" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Test1"], ["description", "Test2"], ["created_at", "2017-04-25 15:26:48.049152"], ["updated_at", "2017-04-25 15:26:48.049152"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 11ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/projects/1" for ::1 at 2017-04-25 10:26:48 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 38ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/1" for ::1 at 2017-04-25 10:27:24 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-04-25 10:27:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-04-25 10:27:24 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-04-25 10:27:24 -0500
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-04-25 10:27:24 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2017-04-25 10:27:24 -0500
+
+
+Started GET "/assets/application.self-7783bf597fbf79b1c3538aabb2541d3e1013a18ddc95e1d5d21b9a63166430e0.css?body=1" for ::1 at 2017-04-25 10:27:24 -0500
+
+
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for ::1 at 2017-04-25 10:27:24 -0500
