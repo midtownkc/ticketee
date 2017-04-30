@@ -1,7 +1,7 @@
 # Tickets belong to Projects
 class TicketsController < ApplicationController
   before_action :set_project
-  before_action :set_ticket, only: [:show, :edit, :update, :destroy]
+  before_action :set_ticket, only: %i[show edit update destroy]
 
   def new
     @ticket = @project.tickets.build
@@ -19,7 +19,18 @@ class TicketsController < ApplicationController
     end
   end
 
-  def show
+  def show; end
+
+  def edit; end
+
+  def update
+    if @ticket.update(ticket_params)
+      flash[:notice] = 'Ticket has been updated.'
+      redirect_to [@project, @ticket]
+    else
+      flash.now[:alert] = 'Ticket has not been updated.'
+      render 'edit'
+    end
   end
 
   private
