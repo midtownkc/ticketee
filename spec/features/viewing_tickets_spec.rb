@@ -29,7 +29,9 @@ RSpec.feature 'Users can view tickets' do
 
     click_link 'Make it shiny!'
     within('#ticket h2') do
-      expect(page).to have_content 'Gradients! Starbursts! Oh my!'
+      expect(page).to have_content 'Make it shiny!'
     end
+
+    expect(page).to have_content 'Gradients! Starbursts! Oh my!'
   end
 end

@@ -1686,3 +1686,155 @@ Migrating to CreateTickets (20170430005033)
             FROM sqlite_temp_master
             WHERE name='index_tickets_on_project_id' AND type='index'
 [0m
+
+
+Started GET "/" for ::1 at 2017-04-30 08:50:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 2833ms (Views: 2817.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-5803cb13de4279eae85ec1be61e9ab4a7e70484e99c04e15f6e3ce559bcdc9fd.css?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/tickets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for ::1 at 2017-04-30 08:50:57 -0500
+
+
+Started GET "/projects/1" for ::1 at 2017-04-30 08:51:02 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.4ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 100ms (Views: 87.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/1/tickets/new" for ::1 at 2017-04-30 08:51:03 -0500
+Processing by TicketsController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered tickets/_form.html.erb (51.6ms)
+  Rendered tickets/new.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 115ms (Views: 106.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/projects/1/tickets" for ::1 at 2017-04-30 08:51:10 -0500
+Processing by TicketsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GQVsrIQrotXkbE6+coBBQ6HG68Zwr/dK95P9t6txDsDzErKGsAAJ1RI+9/VdgH361SX4WpngjS86TUh3D4vLOg==", "ticket"=>{"name"=>"Testingly", "description"=>"Fucker shit"}, "commit"=>"Create Ticket", "project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "tickets" ("name", "description", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Testingly"], ["description", "Fucker shit"], ["project_id", 1], ["created_at", "2017-04-30 13:51:10.415887"], ["updated_at", "2017-04-30 13:51:10.415887"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/1/tickets/1
+Completed 302 Found in 8ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/projects/1/tickets/1" for ::1 at 2017-04-30 08:51:10 -0500
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."project_id" = ? AND "tickets"."id" = ? LIMIT 1  [["project_id", 1], ["id", 1]]
+  Rendered tickets/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-04-30 08:51:17 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/2" for ::1 at 2017-04-30 08:51:18 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = ?  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/1" for ::1 at 2017-04-30 08:51:39 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/1/tickets/1" for ::1 at 2017-04-30 08:51:41 -0500
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."project_id" = ? AND "tickets"."id" = ? LIMIT 1[0m  [["project_id", 1], ["id", 1]]
+  Rendered tickets/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/1/tickets/1" for ::1 at 2017-04-30 08:51:50 -0500
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."project_id" = ? AND "tickets"."id" = ? LIMIT 1[0m  [["project_id", 1], ["id", 1]]
+  Rendered tickets/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.2ms)
