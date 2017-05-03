@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'bootstrap-sass', '~> 3.3'
+gem 'devise', '~> 3.4.1'
 gem 'font-awesome-rails', '~> 4.3'
 gem 'jquery-rails'
 gem 'simple_form', '~> 3.1.0'
@@ -39,6 +40,11 @@ end
 group :test do
   gem 'capybara', '~> 2.4'
   gem 'factory_girl_rails', '~> 4.5'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 ruby '2.2.3'
