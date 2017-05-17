@@ -8,10 +8,12 @@ gem 'rails', '4.2.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
+# auth
+gem 'devise', '~> 3.4.1'
+gem 'pundit', '~> 0.3.0'
 # style stuff
 
 gem 'bootstrap-sass', '~> 3.3'
-gem 'devise', '~> 3.4.1'
 gem 'font-awesome-rails', '~> 4.3'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
