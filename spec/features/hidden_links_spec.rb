@@ -26,7 +26,7 @@ RSpec.feature 'Users can only see the appropriate links' do
       expect(page).not_to have_link 'Delete Project'
     end
 
-    scenario 'cannot see the edit project link' do 
+    scenario 'cannot see the edit project link' do
       visit project_path(project)
       expect(page).not_to have_link 'Edit Project'
     end
