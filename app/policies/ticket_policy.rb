@@ -4,6 +4,7 @@ class TicketPolicy < ApplicationPolicy
       scope
     end
   end
+
   def show?
     user.try(:admin?) || record.project.has_member?(user)
   end
