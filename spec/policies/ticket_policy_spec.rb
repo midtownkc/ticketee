@@ -11,7 +11,7 @@ describe TicketPolicy do
     context 'for anonymous users' do
       let(:user) { nil }
 
-      %i[show create update].each do |action|
+      %i[show create update destroy].each do |action|
         it { should_not permit_action action }
       end
     end
@@ -20,8 +20,10 @@ describe TicketPolicy do
       before { assign_role!(user, :viewer, project) }
 
       it { should permit_action :show }
-      it { should_not permit_action :create }
-      it { should_not permit_action :update }
+
+      %i[create update destroy].each do |action|
+        it { should_not permit_action action }
+      end
     end
 
     context 'for editors of the project' do
@@ -31,13 +33,15 @@ describe TicketPolicy do
         it { should permit_action action }
       end
 
-      it { should_not permit_action :update }
+      %i[update destroy].each do |action|
+        it { should_not permit_action action }
+      end
     end
 
     context 'for managers of the project' do
       before { assign_role!(user, :manager, project) }
 
-      %i[show create update].each do |action|
+      %i[show create update destroy].each do |action|
         it { should permit_action action }
       end
     end
@@ -47,7 +51,7 @@ describe TicketPolicy do
         assign_role!(user, :manager, FactoryGirl.create(:project))
       end
 
-      %i[show create update].each do |action|
+      %i[show create update destroy].each do |action|
         it { should_not permit_action action }
       end
     end
@@ -55,7 +59,7 @@ describe TicketPolicy do
     context 'for admins' do
       let(:user) { FactoryGirl.create :user, :admin }
 
-      %i[show create update].each do |action|
+      %i[show create update destroy].each do |action|
         it { should permit_action action }
       end
     end

@@ -15,6 +15,11 @@ RSpec.feature 'Users can only see the appropriate links' do
       assign_role!(user, :viewer, project)
     end
 
+    scenario 'cannot see the delete ticket link' do
+      visit project_ticket_path(project, ticket)
+      expect(page).not_to have_link 'Delete Ticket'
+    end
+
     scenario 'cannot see the edit link' do
       visit project_ticket_path(project, ticket)
       expect(page).not_to have_link 'Edit Ticket'
@@ -49,7 +54,11 @@ RSpec.feature 'Users can only see the appropriate links' do
   context 'admin users' do
     before { login_as(admin) }
 
-    scenario 'can see the edit ticket link' do 
+    scenario 'can see the Delete ticket link' do
+      visit project_ticket_path(project, ticket)
+      expect(page).to have_link 'Delete Ticket'
+    end
+    scenario 'can see the edit ticket link' do
       visit project_ticket_path(project, ticket)
       expect(page).to have_link 'Edit Ticket'
     end
