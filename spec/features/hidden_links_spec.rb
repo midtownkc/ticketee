@@ -15,7 +15,7 @@ RSpec.feature 'Users can only see the appropriate links' do
       assign_role!(user, :viewer, project)
     end
 
-    scenario 'cannot see the dit link' do
+    scenario 'cannot see the edit link' do
       visit project_ticket_path(project, ticket)
       expect(page).not_to have_link 'Edit Ticket'
     end
